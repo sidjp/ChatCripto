@@ -44,8 +44,8 @@ const MessageSend = ({
     <div className="message-send-section">
       <input type="checkbox" id="emoji" />
       <div className="file hover-attachment">
-        <div className="add-attachment">Add Attachment</div>
-        <FaPlusCircle />
+        {/* <div className="add-attachment">Add Attachment</div>
+       <FaPlusCircle /> */}
       </div>
 
       <div className="file hover-image">
@@ -56,16 +56,15 @@ const MessageSend = ({
           id="pic"
           className="form-control"
         />
-        <label htmlFor="pic">
-          {" "}
-          <FaFileImage />{" "}
-        </label>
+        {/* <label htmlFor="pic">
+          <FaFileImage />
+        </label> */}
       </div>
 
-      <div className="file hover-gift">
+      {/* <div className="file hover-gift">
         <div className="add-gift">Add gift</div>
         <FaGift />
-      </div>
+      </div> */}
 
       <div className="message-type">
         <input
@@ -79,7 +78,7 @@ const MessageSend = ({
         />
 
         <div className="file hover-gift">
-          <label htmlFor="emoji"> ❤️ </label>
+          <label htmlFor="emoji"></label>
         </div>
       </div>
 
@@ -88,11 +87,11 @@ const MessageSend = ({
       </div>
 
       <div className="emoji-section">
-        <div className="emoji">
+        {/* <div className="emoji">
           {emojis.map((e) => (
             <span onClick={() => emojiSend(e)}>{e}</span>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
