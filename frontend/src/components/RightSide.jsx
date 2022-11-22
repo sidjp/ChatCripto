@@ -52,12 +52,12 @@ const RightSide = (props) => {
                     <FaVideo />
                   </div> */}
 
-                  <div className="icon">
+                  {/* <div className="icon">
                     <label htmlFor="dot">
                       {" "}
                       <FaRocketchat />{" "}
                     </label>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
