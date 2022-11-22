@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
-import { FaEllipsisH, FaEdit, FaSistrix, FaSignOutAlt } from "react-icons/fa";
+import { FaSignOutAlt } from "react-icons/fa";
 import { BiArrowToRight } from "react-icons/bi";
-import ActiveFriend from "./ActiveFriend";
 import Friends from "./Friends";
 import RightSide from "./RightSide";
 import { useDispatch, useSelector } from "react-redux";
