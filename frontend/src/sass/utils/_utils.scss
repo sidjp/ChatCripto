@@ -1,7 +1,7 @@
 .card {
   width: 375px;
   padding: 15px 20px;
-  background-color: #1c3f8fd4;
+  background-color: #1c1719; // CSS do card de login e register
   box-shadow: 0px 8px 25px #f5f0f0;
 }
 .form-group {
@@ -21,16 +21,16 @@
 }
 label {
   margin-bottom: 5px;
-  color: #fff;
+  color: #2ca999;
   font-weight: 500;
 }
 .btn {
   outline: none;
-  color: #fff;
+  color: #2ca999; // CSS fonte do botão de login e registro
   text-transform: uppercase;
   padding: 12px;
   text-align: center;
-  background-color: #101a23eb;
+  background-color: #315f59; // CSS do botão de login e registro
   border: none;
   cursor: pointer;
 }
