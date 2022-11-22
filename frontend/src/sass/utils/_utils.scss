@@ -13,24 +13,24 @@
   padding: 12px;
   border: none;
   outline: none;
-  background-color: #0a0e1585;
+  background-color: #4a695a85; // CSS form Login e register
   &::placeholder {
     color: #2ca999; // CSS placeholder forms do login e registro
     font-weight: 400;
   }
 }
 label {
-  margin-bottom: 5px;
+  margin-bottom: 5px; // CSS label login e register
   color: #2ca999;
   font-weight: 500;
 }
 .btn {
   outline: none;
-  color: #2ca999; // CSS fonte do botão de login e registro
+  color: #1bc7b0; // CSS fonte do botão de login e registro
   text-transform: uppercase;
   padding: 12px;
   text-align: center;
-  background-color: #315f59; // CSS do botão de login e registro
+  background-color: #2ca7; // CSS do botão de login e registro
   border: none;
   cursor: pointer;
 }

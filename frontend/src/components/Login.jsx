@@ -88,7 +88,7 @@ const Login = () => {
 
             <div className="form-group">
               <span>
-                <Link to="/messenger/register"> Don't have any Account </Link>
+                <Link to="/messenger/register"> Registre sua conta </Link>
               </span>
             </div>
           </form>

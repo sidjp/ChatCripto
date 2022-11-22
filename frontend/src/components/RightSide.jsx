@@ -54,8 +54,7 @@ const RightSide = (props) => {
 
                   {/* <div className="icon">
                     <label htmlFor="dot">
-                      {" "}
-                      <FaRocketchat />{" "}
+                      <FaRocketchat />
                     </label>
                   </div> */}
                 </div>

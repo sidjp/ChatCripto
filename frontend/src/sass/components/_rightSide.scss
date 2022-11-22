@@ -7,7 +7,7 @@
                  transition: all .5s;
                  .message-send-show{
                      height: 100vh;
-                     border-right: 1px solid var(--border-color);
+                     border-right: 5px solid var(--border-color);
                      display: flex;
                      flex-direction: column;
                      justify-content: space-between;
@@ -16,8 +16,8 @@
                          flex-direction: row;
                          align-items: center;
                          justify-content: space-between;
-                         padding:  12px 10px;
-                         border-bottom: 1px solid var(--border-color);
+                         padding:  25px 30px;
+                         border-bottom: 5px solid var(--border-color);
                          .image-name{
                              display: flex;
                              .image{
