@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { FaEllipsisH, FaEdit, FaSistrix, FaSignOutAlt } from "react-icons/fa";
+import { BiArrowToRight } from "react-icons/bi";
 import ActiveFriend from "./ActiveFriend";
 import Friends from "./Friends";
 import RightSide from "./RightSide";
@@ -322,15 +323,15 @@ const Messenger = () => {
 
               <div className="icons">
                 <div onClick={() => setHide(!hide)} className="icon">
-                  <FaEllipsisH />
+                  <BiArrowToRight />
                 </div>
                 {/* <div className="icon">
                   <FaEdit />
                 </div> */}
 
                 <div className={hide ? "theme_logout" : "theme_logout show"}>
-                  <h3>Dark Mode </h3>
-                  <div className="on">
+                  <h3>Sair</h3>
+                  {/* <div className="on">
                     <label htmlFor="dark">ON</label>
                     <input
                       onChange={(e) => dispatch(themeSet(e.target.value))}
@@ -339,9 +340,9 @@ const Messenger = () => {
                       name="theme"
                       id="dark"
                     />
-                  </div>
+                  </div> */}
 
-                  <div className="of">
+                  {/* <div className="of">
                     <label htmlFor="white">OFF</label>
                     <input
                       onChange={(e) => dispatch(themeSet(e.target.value))}
@@ -350,7 +351,7 @@ const Messenger = () => {
                       name="theme"
                       id="white"
                     />
-                  </div>
+                  </div> */}
 
                   <div onClick={logout} className="logout">
                     <FaSignOutAlt /> Logout
@@ -359,7 +360,7 @@ const Messenger = () => {
               </div>
             </div>
 
-            <div className="friend-search">
+            {/* <div className="friend-search">
               <div className="search">
                 {<button>
                   <FaSistrix />
@@ -371,7 +372,7 @@ const Messenger = () => {
                   className="form-control"
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* <div className='active-friends'>
      {
