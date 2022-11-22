@@ -20,28 +20,28 @@ module.exports.userRegister = (req, res) => {
      const error = [];
 
      if(!userName){
-          error.push('Please provide your user name');
+          error.push('Forneça seu nome de usuário');
      }
      if(!email){
-          error.push('Please provide your Email');
+          error.push('Por favor, forneça seu e-mail');
      }
      if(email && !validator.isEmail(email)){
-          error.push('Please provide your Valid Email');
+          error.push('Forneça seu e-mail válido');
      }
      if(!password){
-          error.push('Please provide your Password');
+          error.push('Por favor, forneça sua senha');
      }
      if(!confirmPassword){
-          error.push('Please provide your confirm Password');
+          error.push('Forneça sua senha de confirmação');
      }
      if(password && confirmPassword && password !== confirmPassword){
-          error.push('Your Password and Confirm Password not same');
+          error.push('Sua senha e Confirmar senha não são iguais');
      }
      if(password && password.length < 6){
-          error.push('Please provide password mush be 6 charecter');
+          error.push('Por favor, forneça a senha deve ter 6 caracteres');
      }
      if(Object.keys(files).length === 0){
-          error.push('Please provide user image');
+          error.push('Forneça a imagem do usuário');
      }
      if(error.length > 0){
           res.status(400).json({
@@ -64,7 +64,7 @@ module.exports.userRegister = (req, res) => {
           if(checkUser) {
                res.status(404).json({
                     error: {
-                         errorMessage : ['Your email already exited']
+                         errorMessage : ['Seu e-mail já existe']
                     }
                })
           }else{
@@ -90,7 +90,7 @@ module.exports.userRegister = (req, res) => {
 const options = { expires : new Date(Date.now() + process.env.COOKIE_EXP * 24 * 60 * 60 * 1000 )}
 
      res.status(201).cookie('authToken',token, options).json({
-          successMessage : 'Your Register Successful',token
+          successMessage : 'Cadastro com sucesso',token
      })
 
                           
@@ -124,13 +124,13 @@ module.exports.userLogin = async (req,res) => {
       const error = [];
       const {email,password} = req.body;
       if(!email){
-          error.push('Please provide your Email');
+          error.push('Por favor, forneça seu e-mail');
      }
      if(!password){
-          error.push('Please provide your Passowrd');
+          error.push('Por favor, forneça sua senha');
      }
      if(email && !validator.isEmail(email)){
-          error.push('Please provide your Valid Email');
+          error.push('Forneça seu e-mail válido');
      }
      if(error.length > 0){
           res.status(400).json({
@@ -161,20 +161,20 @@ module.exports.userLogin = async (req,res) => {
       const options = { expires : new Date(Date.now() + process.env.COOKIE_EXP * 24 * 60 * 60 * 1000 )}
 
      res.status(200).cookie('authToken',token, options).json({
-          successMessage : 'Your Login Successful',token
+          successMessage : 'Seu login foi bem-sucedido',token
      })
 
                     } else{
                          res.status(400).json({
                               error: {
-                                   errorMessage : ['Your Password not Valid']
+                                   errorMessage : ['Sua senha não é válida']
                               }
                          })
                     }
                } else{
                     res.status(400).json({
                          error: {
-                              errorMessage : ['Your Email Not Found']
+                              errorMessage : ['Seu e-mail não foi encontrado']
                          }
                     })
                }
