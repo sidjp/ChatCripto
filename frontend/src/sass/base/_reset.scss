@@ -6,12 +6,12 @@
 :root {
   --text-white: #fff;
   --bg-color: #ffffff;
-  --text-color: #050505;
-  --icon-bg-color: #f5f5f5;
-  --icon-color: #414141;
+  --text-color: #060507; // Cor dos textos da pagina de mensagem
+  --icon-bg-color: #fff; // Cor dos icones da pagina de mensagem
+  --icon-color: #080505; // Cor do icone da pagina de mensagem
   --search-bg: #868e991a;
   --active-color: #0000000a;
-  --border-color: #e5e5e5;
+  --border-color: #ffffff; //Cor das bordas
   --message-icon-color: #0099ff;
   --fd-message-bg: #e5e5e5;
   --my-message-bg: #0084ff;
@@ -29,7 +29,7 @@ body {
 .messenger.theme {
   background-color: #041a4dbf;
   --text-color: #fff;
-  --bg-color: #141b2bf0;
+  --bg-color: #1255f1f0;
   --border-color: #213156bf;
   --icon-bg-color: #0a0a1357;
   --active-color: #2b335591;
