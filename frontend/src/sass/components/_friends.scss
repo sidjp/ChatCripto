@@ -1,14 +1,14 @@
 .friends{
      display: flex;
      flex-direction: column;
-     background-color: var(--border-color);
+     background-color: #fff; // Cor de fundo amigo
      height: 100%;     
      overflow-y: auto;
      &::-webkit-scrollbar{
          display: none;
      }
      .hover-friend.active{
-         background-color: var(--search-bg);
+         background-color: var(--search-bg); // CSS cor da borda amigo
      }
      .hover-friend{
          cursor: pointer;
@@ -18,7 +18,7 @@
          .friend{
              display: flex;
              width: 100%;
-             padding: 7px 15px;
+             padding: 10px 15px;
              .friend-image{
                  .image{
                      margin-right: 8px;
@@ -55,7 +55,7 @@
                          font-weight: 700 !important;
                      }
                      h4{
-                         color: var(--text-color);
+                         color: var(--text-color); // Cor do nome do amigo
                          font-weight: 300;
                      }
                      .msg-time{
@@ -64,7 +64,7 @@
                          }
                          span{
                              font-size: 12px;
-                             color: var(--text-color);
+                             color: var(--text-color); // CSS cor da ultima msg enviado ao amigo
                          }
                      }
                  } 
