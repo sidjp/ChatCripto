@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
     <Routes>
       <Route path="/messenger/login" element={<Login />} />
-      {/* <Route path="/messenger/register" element={<Register />} />  */}
+      <Route path="/messenger/register" element={<Register />} />
       <Route path="/" element={ <ProtectRoute> <Messenger /> </ProtectRoute> } />      
     </Routes>
   </BrowserRouter>,

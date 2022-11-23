@@ -184,7 +184,7 @@ module.exports.userLogin = async (req, res) => {
       } else {
         res.status(400).json({
           error: {
-            errorMessage: ["Seu e-mail não foi encontrado"],
+            errorMessage: ["Usuário não foi encontrado"],
           },
         });
       }
