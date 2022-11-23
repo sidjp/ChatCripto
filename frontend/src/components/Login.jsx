@@ -18,8 +18,9 @@ const Login = () => {
   const dispatch = useDispatch();
 
   const [state, setState] = useState({
-    email: "",
-    password: "",
+    /* email: "",
+    password: "", */
+    userName: "",
   });
 
   const inputHendle = (e) => {
@@ -58,19 +59,19 @@ const Login = () => {
         <div className="card-body">
           <form onSubmit={login}>
             <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="username">User Name</label>
               <input
-                type="email"
+                type="text"
                 onChange={inputHendle}
-                name="email"
-                value={state.email}
+                name="userName"
+                value={state.userName}
                 className="form-control"
-                placeholder="Email"
-                id="email"
+                placeholder="User Name"
+                id="username"
               />
             </div>
 
-            <div className="form-group">
+            {/* <div className="form-group">
               <label htmlFor="password">Password</label>
               <input
                 type="password"
@@ -81,7 +82,7 @@ const Login = () => {
                 placeholder="Password"
                 id="password"
               />
-            </div>
+            </div> */}
 
             <div className="form-group">
               <input type="submit" value="login" className="btn" />
