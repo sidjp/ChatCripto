@@ -49,8 +49,7 @@ const Friends = (props) => {
                     : ""
                 }
               >
-                {" "}
-                {fndInfo.userName + " "}{" "}
+                {fndInfo.userName + " "}
               </span>
             )}
             {msgInfo && msgInfo.message.text ? (

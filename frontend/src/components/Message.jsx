@@ -15,12 +15,11 @@ const Message = ({ message, currentfriend, scrollRef, typingMessage }) => {
                 <div className="image-message">
                   <div className="my-text">
                     <p className="message-text">
-                      {" "}
                       {m.message.text === "" ? (
                         <img src={`./image/${m.message.image}`} />
                       ) : (
                         m.message.text
-                      )}{" "}
+                      )}
                     </p>
 
                     {index === message.length - 1 &&
@@ -33,13 +32,11 @@ const Message = ({ message, currentfriend, scrollRef, typingMessage }) => {
                         />
                       ) : m.status === "delivared" ? (
                         <span>
-                          {" "}
-                          <FaRegCheckCircle />{" "}
+                          <FaRegCheckCircle />
                         </span>
                       ) : (
                         <span>
-                          {" "}
-                          <FaRegCheckCircle />{" "}
+                          <FaRegCheckCircle />
                         </span>
                       )
                     ) : (
