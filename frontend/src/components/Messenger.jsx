@@ -151,6 +151,9 @@ const Messenger = () => {
   const inputHendle = (e) => {
     setNewMessage(e.target.value);
     if (e.key === "Enter") {
+      if(e.target.value === ""){
+        return
+      }
       const data = {
         senderName: myInfo.userName,
         reseverId: currentfriend._id,
