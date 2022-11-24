@@ -1,6 +1,4 @@
 import React from "react";
-/* import { FaPhoneAlt, FaVideo, FaRocketchat } from "react-icons/fa";
-import FriendInfo from "./FriendInfo"; */
 import Message from "./Message";
 import MessageSend from "./MessageSend";
 
@@ -12,7 +10,6 @@ const RightSide = (props) => {
     sendMessage,
     message,
     scrollRef,
-    emojiSend,
     ImageSend,
     activeUser,
     typingMessage,
@@ -43,21 +40,7 @@ const RightSide = (props) => {
                   </div>
                 </div>
 
-                <div className="icons">
-                  {/* <div className="icon">
-                    <FaPhoneAlt />
-                  </div> */}
-
-                  {/* <div className="icon">
-                    <FaVideo />
-                  </div> */}
-
-                  {/* <div className="icon">
-                    <label htmlFor="dot">
-                      <FaRocketchat />
-                    </label>
-                  </div> */}
-                </div>
+                <div className="icons"></div>
               </div>
 
               <Message
@@ -71,19 +54,10 @@ const RightSide = (props) => {
                 inputHendle={inputHendle}
                 newMessage={newMessage}
                 sendMessage={sendMessage}
-                emojiSend={emojiSend}
                 ImageSend={ImageSend}
               />
             </div>
           </div>
-
-          {/* <div className="col-4">
-            <FriendInfo
-              message={message}
-              currentfriend={currentfriend}
-              activeUser={activeUser}
-            />
-          </div> */}
         </div>
       </div>
     </div>

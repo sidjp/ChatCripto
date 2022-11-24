@@ -84,8 +84,7 @@ const Friends = (props) => {
               <img src={`./image/${fndInfo.image}`} alt="" />
             ) : msgInfo.status === "delivared" ? (
               <div className="delivared">
-                {" "}
-                <FaRegCheckCircle />{" "}
+                <FaRegCheckCircle />
               </div>
             ) : (
               <div className="unseen"> </div>
