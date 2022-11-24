@@ -9,7 +9,7 @@ const Register = () => {
   const navigate = useNavigate();
   const alert = useAlert();
 
-  const { loading, authenticate, error, successMessage, myInfo } = useSelector(
+  const { authenticate, error, successMessage, myInfo } = useSelector(
     (state) => state.auth
   );
   console.log(myInfo);

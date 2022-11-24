@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { FaEllipsisH, FaEdit, FaSistrix, FaSignOutAlt } from "react-icons/fa";
-import ActiveFriend from "./ActiveFriend";
+import { FaEllipsisH, FaSignOutAlt } from "react-icons/fa";
 import Friends from "./Friends";
 import RightSide from "./RightSide";
 import { useDispatch, useSelector } from "react-redux";
@@ -179,8 +178,9 @@ const Messenger = () => {
       reseverId: currentfriend._id,
       msg: "",
     });
-
-    dispatch(messageSend(data));
+    if(newMessage !== ""){
+      dispatch(messageSend(data));
+    }
 
     setNewMessage("");
   };
