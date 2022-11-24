@@ -157,7 +157,7 @@ const Messenger = () => {
       const data = {
         senderName: myInfo.userName,
         reseverId: currentfriend._id,
-        message: newMessage ? newMessage : "❤",
+        message: newMessage ? newMessage : null,
       };
 
       dispatch(messageSend(data));
@@ -171,7 +171,7 @@ const Messenger = () => {
     const data = {
       senderName: myInfo.userName,
       reseverId: currentfriend._id,
-      message: newMessage ? newMessage : "❤",
+      message: newMessage ? newMessage : null,
     };
 
     socket.current.emit("typingMessage", {
