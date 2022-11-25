@@ -14,6 +14,30 @@ module.exports.userRegister = (req, res) => {
     const { image } = files;
     const error = [];
 
+    if (!userName) {
+      error.push("Forneça seu nome de usuário");
+    }
+    if (!email) {
+      error.push("Por favor, forneça seu e-mail");
+    }
+    if (email && !validator.isEmail(email)) {
+      error.push("Forneça seu e-mail válido");
+    }
+    if (!password) {
+      error.push("Por favor, forneça sua senha");
+    }
+    if (!confirmPassword) {
+      error.push("Forneça sua senha de confirmação");
+    }
+    if (password && confirmPassword && password !== confirmPassword) {
+      error.push("Sua senha e Confirmar senha não são iguais");
+    }
+    if (password && password.length < 6) {
+      error.push("Por favor, forneça a senha deve ter 6 caracteres");
+    }
+    if (Object.keys(files).length === 0) {
+      error.push("Forneça a imagem do usuário");
+    }
     if (error.length > 0) {
       res.status(400).json({
         error: {
