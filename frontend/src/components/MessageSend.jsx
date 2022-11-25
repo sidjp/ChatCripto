@@ -5,8 +5,6 @@ const MessageSend = ({
   inputHendle,
   newMessage,
   sendMessage,
-  emojiSend,
-  ImageSend,
 }) => {
   return (
     <div className="message-send-section">

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-//import { Link  } from "react-router-dom";
 import { userLogin } from "../store/actions/authAction";
 import { useAlert } from "react-alert";
 import { useDispatch, useSelector } from "react-redux";
@@ -69,27 +68,11 @@ const Login = () => {
               />
             </div>
 
-            {/* <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                onChange={inputHendle}
-                name="password"
-                value={state.password}
-                className="form-control"
-                placeholder="Password"
-                id="password"
-              />
-            </div> */}
-
             <div className="form-group">
               <input type="submit" value="login" className="btn" />
             </div>
 
             <div className="form-group">
-              <span>
-                {/* <Link to="/messenger/register"> Registre sua conta </Link> */}
-              </span>
             </div>
           </form>
         </div>
