@@ -18,8 +18,6 @@ const Login = () => {
   const dispatch = useDispatch();
 
   const [state, setState] = useState({
-    /* email: "",
-    password: "", */
     userName: "",
   });
 
