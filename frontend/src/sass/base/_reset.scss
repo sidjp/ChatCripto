@@ -3,6 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
 :root {
   --text-white: #fff;
   --bg-color: #ffffff;
@@ -21,6 +22,7 @@
   --active-icon-color: #5ad539;
   --hover-color: #bcbcc091;
 }
+
 body {
   background-color: #f0f2f5bf;
   font-family: "Roboto", sans-serif;
@@ -42,13 +44,22 @@ body {
   --icon-color: #fff;
   --message-icon-color: #fff;
   --my-message-color: #fff;
-  --fd-message-color: #fff;
+  --fd-message-color: rgb(245, 241, 241);
   --active-icon-color: #5ad539;
   --image-border-color: #fff;
+
+  .friends {
+    background-color: #6987cfbf;
+    border-radius: 15px;
+    border: var(--border-color) solid 5px;
+  }
+
 }
+
 a {
   text-decoration: none;
 }
+
 li {
   list-style: none;
 }

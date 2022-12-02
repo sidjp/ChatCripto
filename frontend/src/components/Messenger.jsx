@@ -150,7 +150,8 @@ const Messenger = () => {
   const inputHendle = (e) => {
     setNewMessage(e.target.value);
     if (e.key === "Enter") {
-      if(e.target.value === ""){
+      if (e.target.value === "") {
+
         return
       }
       const data = {
@@ -160,7 +161,9 @@ const Messenger = () => {
       };
 
       dispatch(messageSend(data));
-      setNewMessage("");
+      let aux = ''
+      setNewMessage(aux);
+
     }
   };
 
@@ -178,7 +181,7 @@ const Messenger = () => {
       reseverId: currentfriend._id,
       msg: "",
     });
-    if(newMessage !== ""){
+    if (newMessage !== "") {
       dispatch(messageSend(data));
     }
 
@@ -355,21 +358,21 @@ const Messenger = () => {
             <div className="friends">
               {friends && friends.length > 0
                 ? friends.map((fd) => (
-                    <div
-                      onClick={() => setCurrentFriend(fd.fndInfo)}
-                      className={
-                        currentfriend._id === fd.fndInfo._id
-                          ? "hover-friend active"
-                          : "hover-friend"
-                      }
-                    >
-                      <Friends
-                        activeUser={activeUser}
-                        myId={myInfo.id}
-                        friend={fd}
-                      />
-                    </div>
-                  ))
+                  <div
+                    onClick={() => setCurrentFriend(fd.fndInfo)}
+                    className={
+                      currentfriend._id === fd.fndInfo._id
+                        ? "hover-friend active"
+                        : "hover-friend"
+                    }
+                  >
+                    <Friends
+                      activeUser={activeUser}
+                      myId={myInfo.id}
+                      friend={fd}
+                    />
+                  </div>
+                ))
                 : "No Friend"}
             </div>
           </div>
