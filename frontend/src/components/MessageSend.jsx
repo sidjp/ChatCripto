@@ -10,7 +10,7 @@ const MessageSend = ({
     <div className="message-send-section">
       {
         <div className="message-type">
-          <textarea
+          <input
             type="textarea"
             onChange={inputHendle}
             name="message"
