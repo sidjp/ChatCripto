@@ -54,6 +54,22 @@ body {
     border: var(--border-color) solid 5px;
   }
 
+  .message-show .my-message .time {
+    color: white;
+
+
+  }
+
+  .friends .hover-friend .friend .friend-name-seen .friend-name h4 {
+    color: white;
+    font-weight: bold;
+  }
+
+  .friends .hover-friend .friend .friend-name-seen .friend-name .msg-time span {
+    color: white;
+
+  }
+
 }
 
 a {
