@@ -50,20 +50,19 @@ const Login = () => {
     <div className="register">
       <div className="card">
         <div className="card-header">
-          <h3>Login</h3>
         </div>
 
         <div className="card-body">
           <form onSubmit={login}>
             <div className="form-group">
-              <label htmlFor="username">User Name</label>
+              <label htmlFor="username">Seu Nome</label>
               <input
                 type="text"
                 onChange={inputHendle}
                 name="userName"
                 value={state.userName}
                 className="form-control"
-                placeholder="User Name"
+                placeholder="Seu Nome"
                 id="username"
               />
             </div>

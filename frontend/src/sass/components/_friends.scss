@@ -37,7 +37,7 @@
                          background-color: rgb(43, 228, 43);
                          right: -2px;
                          bottom: 6px;
-                         border: 1px solid #fff;
+                         border: 1px solid rgb(255, 255, 255);
                      }
                  }
              }
@@ -55,7 +55,7 @@
                          font-weight: 700 !important;
                      }
                      h4{
-                         color: var(--text-color); // Cor do nome do amigo
+                         color: black; // Cor do nome do amigo
                          font-weight: 300;
                      }
                      .msg-time{
@@ -64,7 +64,7 @@
                          }
                          span{
                              font-size: 12px;
-                             color: var(--text-color); // CSS cor da ultima msg enviado ao amigo
+                             color: black; // CSS cor da ultima msg enviado ao amigo
                          }
                      }
                  } 
