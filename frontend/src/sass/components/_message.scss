@@ -2,6 +2,7 @@
     height: 100%;
     padding: 10px;
     overflow-y: auto;
+    width: 100%;
 
     &::-webkit-scrollbar {
         overflow: hidden;
@@ -29,6 +30,7 @@
     .my-message {
         float: right;
 
+
         .my-text {
             display: flex;
             align-items: flex-end;
@@ -55,6 +57,9 @@
                 padding: 10px;
                 border-radius: 10px;
                 white-space: pre-line;
+                width: auto;
+                max-width: 400px;
+                word-wrap: break-word;
 
                 img {
                     width: 220px;
@@ -92,7 +97,12 @@
 
             .message-text {
                 text-align: start;
+                padding: 10px;
                 border-radius: 10px;
+                white-space: pre-line;
+                width: auto;
+                max-width: 400px;
+                word-wrap: break-word;
 
                 img {
                     width: 220px;
