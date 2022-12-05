@@ -1,4 +1,5 @@
 import React from "react";
+import Logout from "./Logout";
 import Message from "./Message";
 import MessageSend from "./MessageSend";
 
@@ -39,8 +40,6 @@ const RightSide = (props) => {
                     <h3>{currentfriend.userName} </h3>
                   </div>
                 </div>
-
-                <div className="icons"></div>
               </div>
 
               <Message
@@ -58,9 +57,13 @@ const RightSide = (props) => {
               />
             </div>
           </div>
-        </div>
+          <div className='col-4'>
+            <Logout />
+          </div>
+        </div>        
       </div>
     </div>
+    
   );
 };
 
