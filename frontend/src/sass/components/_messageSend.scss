@@ -90,12 +90,19 @@
             &::placeholder {
                 color: #0d0d0e;
             }
+
+
         }
 
         label {
             font-size: 20px;
             margin-right: 5px;
             cursor: pointer;
+        }
+
+        textarea::-webkit-scrollbar {
+            width: 0px;
+
         }
     }
 
