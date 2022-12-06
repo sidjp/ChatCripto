@@ -27,12 +27,12 @@ const Logout = () => {
         </div>
 
         <div className="tema">
-          <div className="on">
+          <div className="ligado">
             <label htmlFor="dark">ON</label>
             <input type="radio" value="dark" name="theme" id="dark" />
           </div>
 
-          <div className="off">
+          <div className="desligado">
             <label htmlFor="white">OFF</label>
             <input type="radio" value="white" name="theme" id="white" />
           </div>
