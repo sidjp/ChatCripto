@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaSignOutAlt } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { userLogout } from "../store/actions/authAction";
+import {  themeSet } from "../store/actions/messengerAction";
 
 const Logout = () => {
   const [hide, setHide] = useState(true);
@@ -29,12 +30,22 @@ const Logout = () => {
         <div className="tema">
           <div className="ligado">
             <label htmlFor="dark">ON</label>
-            <input type="radio" value="dark" name="theme" id="dark" />
+            <input 
+            onChange={(e) => dispatch(themeSet(e.target.value))}
+            type="radio" 
+            value="dark" 
+            name="theme" 
+            id="dark" />
           </div>
 
           <div className="desligado">
             <label htmlFor="white">OFF</label>
-            <input type="radio" value="white" name="theme" id="white" />
+            <input 
+            onChange={(e) => dispatch(themeSet(e.target.value))}
+            type="radio" 
+            value="white" 
+            name="theme" 
+            id="white" />
           </div>
         </div>
       </div>
