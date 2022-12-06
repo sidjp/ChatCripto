@@ -13,7 +13,6 @@ import {
      getTheme,
      themeSet,
 } from "../store/actions/messengerAction";
-import { userLogout } from "../store/actions/authAction";
 
 import toast, { Toaster } from "react-hot-toast";
 import { io } from "socket.io-client";
@@ -289,11 +288,6 @@ const Messenger = () => {
 
      const [hide, setHide] = useState(true);
 
-     const logout = () => {
-          dispatch(userLogout());
-          socket.current.emit("logout", myInfo.id);
-     };
-
      useEffect(() => {
           dispatch(getTheme());
      }, []);
@@ -350,10 +344,6 @@ const Messenger = () => {
                                                        name="theme"
                                                        id="white"
                                                   />
-                                             </div>
-
-                                             <div onClick={logout} className="logout">
-                                                  <FaSignOutAlt /> Logout
                                              </div>
                                         </div>
                                    </div>
