@@ -164,7 +164,8 @@ const Messenger = () => {
                     message: newMessage ? newMessage : null,
                };
 
-
+               const result = criptografar(3, data.message)
+               message.data = result
 
                dispatch(messageSend(data));
                // message + \n + message
@@ -179,6 +180,9 @@ const Messenger = () => {
                reseverId: currentfriend._id,
                message: newMessage ? newMessage : null,
           };
+
+          const result = criptografar(3, data.message)
+          message.data = result
 
           socket.current.emit("typingMessage", {
                senderId: myInfo.id,
