@@ -4,26 +4,31 @@
   background-color: #1c1719; // CSS do card de login e register
   box-shadow: 0px 8px 25px #f5f0f0;
 }
+
 .form-group {
   margin: 10px 0px;
   display: flex;
   flex-direction: column;
 }
+
 .form-control {
-  padding: 12px;
+  padding: 5px 5px 10px 10px;
   border: none;
   outline: none;
   background-color: #4a695a85; // CSS form Login e register
+
   &::placeholder {
     color: #2ca999; // CSS placeholder forms do login e registro
     font-weight: 400;
   }
 }
+
 label {
   margin-bottom: 5px; // CSS label login e register
   color: #2ca999;
   font-weight: 500;
 }
+
 .btn {
   outline: none;
   color: #1bc7b0; // CSS fonte do botão de login e registro
