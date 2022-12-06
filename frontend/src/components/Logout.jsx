@@ -16,19 +16,19 @@ const Logout = () => {
     <>
       <div className="body">
         <div onClick={logout} className="logout">
-          <button>
+          <button className="btn-logout">
             <FaSignOutAlt /> Logout{" "}
           </button>
         </div>
 
         <div className="darkmode">
           <div className={hide ? "theme_logout" : "theme_logout_show"}>
-            <h3>Dark Mode</h3>
+            <h3 className="title-dark-mode">Dark Mode</h3>
           </div>
         </div>
 
         <div className="tema">
-          <div className="ligado">
+          <div className="on">
             <label htmlFor="dark">ON</label>
             <input 
             onChange={(e) => dispatch(themeSet(e.target.value))}
@@ -38,7 +38,7 @@ const Logout = () => {
             id="dark" />
           </div>
 
-          <div className="desligado">
+          <div className="off">
             <label htmlFor="white">OFF</label>
             <input 
             onChange={(e) => dispatch(themeSet(e.target.value))}
