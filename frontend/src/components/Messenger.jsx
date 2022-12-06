@@ -20,6 +20,7 @@ import { io } from "socket.io-client";
 import useSound from "use-sound";
 import notificationSound from "../audio/notification.mp3";
 import sendingSound from "../audio/sending.mp3";
+import criptografar from "./criptografar";
 
 const Messenger = () => {
      const [notificationSPlay] = useSound(notificationSound);
@@ -164,8 +165,8 @@ const Messenger = () => {
                     message: newMessage ? newMessage : null,
                };
 
-               const result = criptografar(3, data.message)
-               message.data = result
+               let result = criptografar(3, data.message)
+               data.message = result
 
                dispatch(messageSend(data));
                // message + \n + message
@@ -181,8 +182,8 @@ const Messenger = () => {
                message: newMessage ? newMessage : null,
           };
 
-          const result = criptografar(3, data.message)
-          message.data = result
+          let result = criptografar(3, data.message)
+          data.message = result
 
           socket.current.emit("typingMessage", {
                senderId: myInfo.id,
