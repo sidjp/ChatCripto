@@ -284,6 +284,7 @@ const Messenger = () => {
 
   useEffect(() => {
     dispatch(getTheme());
+    socket.current.emit('logout', myInfo.id);
   }, []);
 
   return (
