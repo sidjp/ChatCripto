@@ -17,19 +17,19 @@ const Logout = () => {
       <div className="body">
         <div onClick={logout} className="logout">
           <button className="btn-logout">
-            <FaSignOutAlt /> Logout{" "}
+            <FaSignOutAlt /> Sair
           </button>
         </div>
 
         <div className="darkmode">
           <div className={hide ? "theme_logout" : "theme_logout_show"}>
-            <h3 className="title-dark-mode">Dark Mode</h3>
+            <h3 className="title-dark-mode">Tema escuro</h3>
           </div>
         </div>
 
         <div className="tema">
           <div className="on">
-            <label htmlFor="dark">ON</label>
+            <label htmlFor="dark">Ligar</label>
             <input 
             onChange={(e) => dispatch(themeSet(e.target.value))}
             type="radio" 
@@ -39,7 +39,7 @@ const Logout = () => {
           </div>
 
           <div className="off">
-            <label htmlFor="white">OFF</label>
+            <label htmlFor="white">Desligar</label>
             <input 
             onChange={(e) => dispatch(themeSet(e.target.value))}
             type="radio" 
