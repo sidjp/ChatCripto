@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment";
+import 'moment/locale/pt-br';
 import { FaRegCheckCircle } from "react-icons/fa";
 
 const Friends = (props) => {
@@ -38,7 +39,7 @@ const Friends = (props) => {
 
           <div className="msg-time">
             {msgInfo && msgInfo.senderId === myId ? (
-              <span>You </span>
+              <span>Você </span>
             ) : (
               <span
                 className={
