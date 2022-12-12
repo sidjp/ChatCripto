@@ -20,6 +20,7 @@ import { io } from "socket.io-client";
 import useSound from "use-sound";
 import notificationSound from "../audio/notification.mp3";
 import sendingSound from "../audio/sending.mp3";
+import criptografar from "../criptografar"
 
 
 const Messenger = () => {
@@ -166,8 +167,10 @@ const Messenger = () => {
                };
 
 
-
-               dispatch(messageSend(data));
+               // Import da criptografia de cesar
+               let result = criptografar(3, data.message)
+               result = data
+               dispatch(messageSend(result));
                // message + \n + message
                setNewMessage("");
           }
@@ -363,8 +366,9 @@ const Messenger = () => {
 
                               <div className="friends">
                                    {friends && friends.length > 0
-                                        ? friends.map((fd) => (
+                                        ? friends.map((fd, index) => (
                                              <div
+                                                  key={index}
                                                   onClick={() => setCurrentFriend(fd.fndInfo)}
                                                   className={
                                                        currentfriend._id === fd.fndInfo._id

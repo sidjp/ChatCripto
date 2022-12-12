@@ -3,7 +3,6 @@ const messageModel = require('../models/messageModel');
 const formidable = require('formidable');
 const fs = require('fs');
 
-const criptografar = require("../criptografar")
 
 const getLastMessage = async (myId, fdId) => {
      const msg = await messageModel.findOne({
@@ -73,8 +72,8 @@ module.exports.messageUploadDB = async (req, res) => {
           message
      } = req.body
      const senderId = req.myId;
-     let result = criptografar(3, message)
-     console.log(result)
+
+
      try {
           const insertMessage = await messageModel.create({
                senderId: senderId,
