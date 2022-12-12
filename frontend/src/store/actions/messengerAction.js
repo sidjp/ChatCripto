@@ -31,6 +31,7 @@ export const messageSend = (data) => async (dispatch) => {
       type: MESSAGE_SEND_SUCCESS,
       payload: {
         message: response.data.message,
+        messageEncrypt: response.data.messageEncrypt
       },
     });
   } catch (error) {

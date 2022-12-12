@@ -69,7 +69,8 @@ module.exports.messageUploadDB = async (req, res) => {
      const {
           senderName,
           reseverId,
-          message
+          message,
+          messageEncrypt
      } = req.body
      const senderId = req.myId;
 
@@ -81,6 +82,7 @@ module.exports.messageUploadDB = async (req, res) => {
                reseverId: reseverId,
                message: {
                     text: message,
+                    encrypt: messageEncrypt,
                     image: ''
                }
 
@@ -178,6 +180,7 @@ module.exports.ImageMessageSend = (req, res) => {
                               reseverId: reseverId,
                               message: {
                                    text: '',
+                                   encrypt: '',
                                    image: files.image.originalFilename
                               }
                          })

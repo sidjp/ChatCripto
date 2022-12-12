@@ -164,13 +164,15 @@ const Messenger = () => {
                     senderName: myInfo.userName,
                     reseverId: currentfriend._id,
                     message: newMessage ? newMessage : null,
+                    messageEncrypt: newMessage ? newMessage : null
                };
 
 
                // Import da criptografia de cesar
                // setado como valor 3 da chave da criptografia como padrão
                let result = criptografar(3, data.message)
-               data.message = result
+               data.messageEncrypt = result
+
                dispatch(messageSend(data));
                // message + \n + message
                setNewMessage("");
