@@ -168,9 +168,10 @@ const Messenger = () => {
 
 
                // Import da criptografia de cesar
+               // setado como valor 3 da chave da criptografia como padrão
                let result = criptografar(3, data.message)
-               result = data
-               dispatch(messageSend(result));
+               data.message = result
+               dispatch(messageSend(data));
                // message + \n + message
                setNewMessage("");
           }
