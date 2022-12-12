@@ -12,4 +12,4 @@ const criptografar = (chave, texto) => {
     return txtCifrado
 }
 
-export default criptografar
+module.exports = criptografar
