@@ -68,7 +68,7 @@ const Friends = (props) => {
             ) : msgInfo && msgInfo.message.image ? (
               <span>Send A image </span>
             ) : (
-              <span>está conectado a </span>
+              <span>conectou a </span>
             )}
             <span>
               {msgInfo
