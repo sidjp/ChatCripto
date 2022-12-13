@@ -48,6 +48,7 @@ export const getMessage = (id) => {
         type: MESSAGE_GET_SUCCESS,
         payload: {
           message: response.data.message,
+          messageEncrypt: response.data.messageEncrypt
         },
       });
 
@@ -67,6 +68,7 @@ export const ImageMessageSend = (data) => async (dispatch) => {
       type: MESSAGE_SEND_SUCCESS,
       payload: {
         message: response.data.message,
+        messageEncrypt: response.data.messageEncrypt
       },
     });
   } catch (error) {

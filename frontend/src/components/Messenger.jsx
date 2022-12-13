@@ -172,7 +172,7 @@ const Messenger = () => {
                // setado como valor 3 da chave da criptografia como padrão
                let result = criptografar(3, data.message)
                data.messageEncrypt = result
-
+               console.log(data.messageEncrypt)
                dispatch(messageSend(data));
                // message + \n + message
                setNewMessage("");

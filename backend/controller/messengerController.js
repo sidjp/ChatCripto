@@ -82,14 +82,16 @@ module.exports.messageUploadDB = async (req, res) => {
                reseverId: reseverId,
                message: {
                     text: message,
-                    encrypt: messageEncrypt,
+                    messageEncrypt: messageEncrypt,
                     image: ''
                }
+
+
 
           })
           res.status(201).json({
                success: true,
-               message: insertMessage
+               message: insertMessage,
           })
 
      } catch (error) {
@@ -180,7 +182,7 @@ module.exports.ImageMessageSend = (req, res) => {
                               reseverId: reseverId,
                               message: {
                                    text: '',
-                                   encrypt: '',
+                                   messageEncrypt: '',
                                    image: files.image.originalFilename
                               }
                          })
