@@ -170,9 +170,8 @@ const Messenger = () => {
 
                // Import da criptografia de cesar
                // setado como valor 3 da chave da criptografia como padrão
-               let result = criptografar(3, data.message)
-               data.messageEncrypt = result
-               console.log(data.messageEncrypt)
+               let result = criptografar(3, data.message) // aqui criptografou a mensagem
+               data.messageEncrypt = result // mensagem criptografada é salva em result
                dispatch(messageSend(data));
                // message + \n + message
                setNewMessage("");
@@ -187,6 +186,7 @@ const Messenger = () => {
                message: newMessage ? newMessage : null,
                messageEncrypt: newMessage ? newMessage : null
           };
+
 
 
           socket.current.emit("typingMessage", {

@@ -15,10 +15,10 @@ const Message = ({ message, currentfriend, scrollRef, typingMessage }) => {
                 <div className="image-message">
                   <div className="my-text">
                     <p className="message-text">
-                      {m.message.text === "" ? (
+                      {m.message.messageEncrypt === "" ? (
                         <img src={`./image/${m.message.image}`} />
                       ) : (
-                        m.message.text
+                        m.message.messageEncrypt
                       )}
                     </p>
 
@@ -56,10 +56,10 @@ const Message = ({ message, currentfriend, scrollRef, typingMessage }) => {
                     <div className="fd-text">
                       <p className="message-text">
                         {" "}
-                        {m.message.text === "" ? (
+                        {m.message.messageEncrypt === "" ? (
                           <img src={`./image/${m.message.image}`} />
                         ) : (
-                          m.message.text
+                          m.message.messageEncrypt
                         )}{" "}
                       </p>
                     </div>
