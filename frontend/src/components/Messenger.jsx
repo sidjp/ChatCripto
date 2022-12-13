@@ -185,6 +185,7 @@ const Messenger = () => {
                senderName: myInfo.userName,
                reseverId: currentfriend._id,
                message: newMessage ? newMessage : null,
+               messageEncrypt: newMessage ? newMessage : null
           };
 
 
