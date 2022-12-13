@@ -7,6 +7,8 @@ import {
   THEME_SET_SUCCESS,
 } from "../types/messengerType";
 
+
+
 export const getFriends = () => async (dispatch) => {
   try {
     const response = await axios.get("/api/messenger/get-friends");
@@ -24,10 +26,12 @@ export const getFriends = () => async (dispatch) => {
 export const messageSend = (data) => async (dispatch) => {
   try {
     const response = await axios.post("/api/messenger/send-message", data);
+
     dispatch({
       type: MESSAGE_SEND_SUCCESS,
       payload: {
         message: response.data.message,
+        messageEncrypt: response.data.messageEncrypt
       },
     });
   } catch (error) {
@@ -39,12 +43,15 @@ export const getMessage = (id) => {
   return async (dispatch) => {
     try {
       const response = await axios.get(`/api/messenger/get-message/${id}`);
+
       dispatch({
         type: MESSAGE_GET_SUCCESS,
         payload: {
           message: response.data.message,
+          messageEncrypt: response.data.messageEncrypt
         },
       });
+
     } catch (error) {
       console.log(error.response.data);
     }
@@ -61,6 +68,7 @@ export const ImageMessageSend = (data) => async (dispatch) => {
       type: MESSAGE_SEND_SUCCESS,
       payload: {
         message: response.data.message,
+        messageEncrypt: response.data.messageEncrypt
       },
     });
   } catch (error) {

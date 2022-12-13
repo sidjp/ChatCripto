@@ -52,6 +52,7 @@ export const messengerReducer = (state = messengerState, action) => {
       mesageSendSuccess: true,
       message: [...state.message, payload.message],
     };
+
   }
 
   if (type === SOCKET_MESSAGE) {

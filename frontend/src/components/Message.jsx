@@ -11,19 +11,19 @@ const Message = ({ message, currentfriend, scrollRef, typingMessage }) => {
         {message && message.length > 0 ? (
           message.map((m, index) =>
             m.senderId === myInfo.id ? (
-              <div ref={scrollRef} className="my-message">
+              <div key={index} ref={scrollRef} className="my-message">
                 <div className="image-message">
                   <div className="my-text">
                     <p className="message-text">
-                      {m.message.text === "" ? (
+                      {m.message.messageEncrypt === "" ? (
                         <img src={`./image/${m.message.image}`} />
                       ) : (
-                        m.message.text
+                        m.message.messageEncrypt
                       )}
                     </p>
 
                     {index === message.length - 1 &&
-                    m.senderId === myInfo.id ? (
+                      m.senderId === myInfo.id ? (
                       m.status === "seen" ? (
                         <img
                           className="img"
@@ -56,10 +56,10 @@ const Message = ({ message, currentfriend, scrollRef, typingMessage }) => {
                     <div className="fd-text">
                       <p className="message-text">
                         {" "}
-                        {m.message.text === "" ? (
+                        {m.message.messageEncrypt === "" ? (
                           <img src={`./image/${m.message.image}`} />
                         ) : (
-                          m.message.text
+                          m.message.messageEncrypt
                         )}{" "}
                       </p>
                     </div>
@@ -83,15 +83,15 @@ const Message = ({ message, currentfriend, scrollRef, typingMessage }) => {
         )}
       </div>
       {typingMessage &&
-      typingMessage.msg &&
-      typingMessage.senderId === currentfriend._id ? (
+        typingMessage.msg &&
+        typingMessage.senderId === currentfriend._id ? (
         <div className="typing-message">
           <div className="fd-message">
             <div className="image-message-time">
               <img src={`./image/${currentfriend.image}`} alt="" />
               <div className="message-time">
                 <div className="fd-text">
-                  <p className="time">Typing Message.... </p>
+                  <p className="time">Digitando mensagem.... </p>
                 </div>
               </div>
             </div>
