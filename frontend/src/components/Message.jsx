@@ -91,7 +91,7 @@ const Message = ({ message, currentfriend, scrollRef, typingMessage }) => {
               <img src={`./image/${currentfriend.image}`} alt="" />
               <div className="message-time">
                 <div className="fd-text">
-                  <p className="time">Typing Message.... </p>
+                  <p className="time">Digitando mensagem.... </p>
                 </div>
               </div>
             </div>
