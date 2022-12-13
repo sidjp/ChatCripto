@@ -4,7 +4,6 @@ import {
   Route
 } from "react-router-dom";
 import Login from "./components/Login";
-import Logout from "./components/Logout";
 import Messenger from "./components/Messenger";
 import ProtectRoute from "./components/ProtectRoute";
 
