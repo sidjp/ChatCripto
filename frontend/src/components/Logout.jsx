@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const Logout = () => {
   const [hide, setHide] = useState(true);
-  const [state, setState] = useState(true);
+  const [state, setState] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -35,20 +35,20 @@ const Logout = () => {
           <div>
             <Form>
               <FormGroup switch>
-                <Input
+                <Input className="tema-dark-switch"
                   type="switch"
                   checked={state}
                   onClick={() => {
                     setState(!state);
-                    if (state === true) {
+                    if (state === false) {
                       dispatch(themeSet("dark"));
                     }
-                    if (state === false) {
+                    if (state === true) {
                       dispatch(themeSet("white"));
                     }
                   }}
                 />
-                <Label check>Ligar tema escuro</Label>
+                <Label check>Ligar</Label>
               </FormGroup>
             </Form>
           </div>
