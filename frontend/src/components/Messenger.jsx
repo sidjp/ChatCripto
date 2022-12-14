@@ -11,7 +11,6 @@ import {
      seenMessage,
      updateMessage,
      getTheme,
-     themeSet,
 } from "../store/actions/messengerAction";
 import { userLogout } from "../store/actions/authAction";
 
@@ -298,13 +297,9 @@ const Messenger = () => {
 
      const [hide, setHide] = useState(true);
 
-     const logout = () => {
-          dispatch(userLogout());
-          socket.current.emit("logout", myInfo.id);
-     };
-
      useEffect(() => {
           dispatch(getTheme());
+          socket.current.emit('logout', myInfo.id);
      }, []);
 
      return (
@@ -333,38 +328,7 @@ const Messenger = () => {
                                    </div>
 
                                    <div className="icons">
-                                        <div onClick={() => setHide(!hide)} className="icon">
-                                             <FaEllipsisH />
-                                        </div>
-
-                                        <div className={hide ? "theme_logout" : "theme_logout show"}>
-                                             <h3>Dark Mode </h3>
-                                             <div className="on">
-                                                  <label htmlFor="dark">ON</label>
-                                                  <input
-                                                       onChange={(e) => dispatch(themeSet(e.target.value))}
-                                                       type="radio"
-                                                       value="dark"
-                                                       name="theme"
-                                                       id="dark"
-                                                  />
-                                             </div>
-
-                                             <div className="of">
-                                                  <label htmlFor="white">OFF</label>
-                                                  <input
-                                                       onChange={(e) => dispatch(themeSet(e.target.value))}
-                                                       type="radio"
-                                                       value="white"
-                                                       name="theme"
-                                                       id="white"
-                                                  />
-                                             </div>
-
-                                             <div onClick={logout} className="logout">
-                                                  <FaSignOutAlt /> Logout
-                                             </div>
-                                        </div>
+                                        <div onClick={() => setHide(!hide)} className="icon"></div>
                                    </div>
                               </div>
 
