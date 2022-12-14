@@ -38,7 +38,11 @@ const Friends = (props) => {
 
           <div className="msg-time">
             {msgInfo && msgInfo.senderId === myId ? (
+<<<<<<< HEAD
               <span>You </span>
+=======
+              <span>Conectou </span>
+>>>>>>> 75bdf18871ac746aefe1d8522782140639346e42
             ) : (
               <span
                 className={
@@ -62,7 +66,7 @@ const Friends = (props) => {
                     : ""
                 }
               >
-                {msgInfo.message.text.slice(0, 10)}
+                {/* {msgInfo.message.text.slice(0, 10)} */}
               </span>
             ) : msgInfo && msgInfo.message.image ? (
               <span>Send A image </span>
