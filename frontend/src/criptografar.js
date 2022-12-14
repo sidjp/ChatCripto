@@ -10,7 +10,7 @@ const criptografar = (chave, texto) => {
         }
         c = code
         c = String.fromCharCode(c)
-        console.log(c);
+
         txtCifrado += c;
     }
     return txtCifrado
