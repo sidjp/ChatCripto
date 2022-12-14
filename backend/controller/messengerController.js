@@ -92,6 +92,7 @@ module.exports.messageUploadDB = async (req, res) => {
           res.status(201).json({
                success: true,
                message: insertMessage,
+               messageEncrypt: insertMessage
           })
 
      } catch (error) {

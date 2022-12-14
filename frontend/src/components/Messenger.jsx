@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import { FaEllipsisH, FaSignOutAlt } from "react-icons/fa";
 import Friends from "./Friends";
 import RightSide from "./RightSide";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,15 +11,16 @@ import {
      seenMessage,
      updateMessage,
      getTheme,
+     themeSet,
 } from "../store/actions/messengerAction";
+import { userLogout } from "../store/actions/authAction";
+import criptografar from "../criptografar"
 
 import toast, { Toaster } from "react-hot-toast";
 import { io } from "socket.io-client";
 import useSound from "use-sound";
 import notificationSound from "../audio/notification.mp3";
 import sendingSound from "../audio/sending.mp3";
-import criptografar from "../criptografar"
-
 
 const Messenger = () => {
      const [notificationSPlay] = useSound(notificationSound);
@@ -145,6 +147,7 @@ const Messenger = () => {
                });
           }
      }, [socketMessage]);
+
 
      const inputHendle = (e) => {
           setNewMessage(e.target.value);
@@ -295,9 +298,13 @@ const Messenger = () => {
 
      const [hide, setHide] = useState(true);
 
+     const logout = () => {
+          dispatch(userLogout());
+          socket.current.emit("logout", myInfo.id);
+     };
+
      useEffect(() => {
           dispatch(getTheme());
-          socket.current.emit('logout', myInfo.id);
      }, []);
 
      return (
@@ -326,15 +333,45 @@ const Messenger = () => {
                                    </div>
 
                                    <div className="icons">
-                                        <div onClick={() => setHide(!hide)} className="icon"></div>
+                                        <div onClick={() => setHide(!hide)} className="icon">
+                                             <FaEllipsisH />
+                                        </div>
+
+                                        <div className={hide ? "theme_logout" : "theme_logout show"}>
+                                             <h3>Dark Mode </h3>
+                                             <div className="on">
+                                                  <label htmlFor="dark">ON</label>
+                                                  <input
+                                                       onChange={(e) => dispatch(themeSet(e.target.value))}
+                                                       type="radio"
+                                                       value="dark"
+                                                       name="theme"
+                                                       id="dark"
+                                                  />
+                                             </div>
+
+                                             <div className="of">
+                                                  <label htmlFor="white">OFF</label>
+                                                  <input
+                                                       onChange={(e) => dispatch(themeSet(e.target.value))}
+                                                       type="radio"
+                                                       value="white"
+                                                       name="theme"
+                                                       id="white"
+                                                  />
+                                             </div>
+
+                                             <div onClick={logout} className="logout">
+                                                  <FaSignOutAlt /> Logout
+                                             </div>
+                                        </div>
                                    </div>
                               </div>
 
                               <div className="friends">
                                    {friends && friends.length > 0
-                                        ? friends.map((fd, index) => (
+                                        ? friends.map((fd) => (
                                              <div
-                                                  key={index}
                                                   onClick={() => setCurrentFriend(fd.fndInfo)}
                                                   className={
                                                        currentfriend._id === fd.fndInfo._id
@@ -375,4 +412,4 @@ const Messenger = () => {
      );
 };
 
-export default Messenger;
+export default Messenger;     
