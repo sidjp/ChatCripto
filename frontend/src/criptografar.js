@@ -1,12 +1,16 @@
 const criptografar = (chave, texto) => {
-    let aux = ''
     let txtCifrado = ''
     let c = ""
     for (let i = 0; i < texto.length; i++) {
-        aux = ''
+
         let code = texto.charCodeAt(i) + chave
-        c = aux + code
+        if (code == 13) {
+
+            txtCifrado += `\n`;
+        }
+        c = code
         c = String.fromCharCode(c)
+        console.log(c);
         txtCifrado += c;
     }
     return txtCifrado
