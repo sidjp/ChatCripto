@@ -148,7 +148,6 @@ const Messenger = () => {
           }
      }, [socketMessage]);
 
-
      const inputHendle = (e) => {
           setNewMessage(e.target.value);
           if (e.key === "Enter" && !e.shiftKey) {
@@ -187,7 +186,8 @@ const Messenger = () => {
                messageEncrypt: newMessage ? newMessage : null
           };
 
-
+          let result = criptografar(3, data.message) // aqui criptografou a mensagem
+          data.messageEncrypt = result // mensagem criptografada é salva em result
 
           socket.current.emit("typingMessage", {
                senderId: myInfo.id,
