@@ -29,8 +29,8 @@ const RightSide = (props) => {
                     <img src={`./image/${currentfriend.image}`} alt="" />
 
                     {activeUser &&
-                      activeUser.length > 0 &&
-                      activeUser.some((u) => u.userId === currentfriend._id) ? (
+                    activeUser.length > 0 &&
+                    activeUser.some((u) => u.userId === currentfriend._id) ? (
                       <div className="active-icon"></div>
                     ) : (
                       ""
@@ -60,10 +60,10 @@ const RightSide = (props) => {
           <div className='col-4'>
             <Logout />
           </div>
-        </div>
+        </div>        
       </div>
     </div>
-
+    
   );
 };
 

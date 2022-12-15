@@ -187,7 +187,8 @@ const Messenger = () => {
                messageEncrypt: newMessage ? newMessage : null
           };
 
-
+          let result = criptografar(3, data.message) // aqui criptografou a mensagem
+          data.messageEncrypt = result // mensagem criptografada é salva em result
 
           socket.current.emit("typingMessage", {
                senderId: myInfo.id,
