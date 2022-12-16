@@ -15,7 +15,7 @@ function App() {
       <Route path="/messenger/login" element={<Login />} />
       <Route path="/" element={ <ProtectRoute> <Messenger /> </ProtectRoute> } />      
     </Routes>
-  </BrowserRouter>,
+  </BrowserRouter>
       
     </div>
   );
