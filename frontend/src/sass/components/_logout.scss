@@ -1,0 +1,40 @@
+.body{
+    text-align: center;
+}
+
+.darkmode{
+    margin-top: 50px;
+}
+
+.on ,.off{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 130px;
+    margin-right: 130px;
+}
+
+.btn-logout {
+    text-align: center;
+    background-color: #1bc7b0;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 10px 40px;
+    transition: all 0.4s;
+    margin-top: 50px;
+}
+.btn-logout:hover {
+    background-color: #2ca999;
+}
+
+.title-dark-mode{
+    color: var(--text-color);
+}
+
+.tema-dark-switch {
+    position: absolute;
+}

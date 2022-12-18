@@ -1,9 +1,11 @@
-.row{
+.row {
      display: flex;
      width: 100%;
+     --bs-gutter-x: 0px
 }
-@for $i from 1 through 12{
-     .col-#{$i}{
+
+@for $i from 1 through 12 {
+     .col-#{$i} {
           width: 100%/12*$i;
      }
 }

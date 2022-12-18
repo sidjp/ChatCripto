@@ -1,32 +1,37 @@
-const {model,Schema} = require('mongoose');
+const { model, Schema } = require('mongoose');
 
 const messageSchema = new Schema({
-     senderId : {
-          type : String,
-          required : true
-     },
-     senderName : {
+     senderId: {
           type: String,
-          required : true
+          required: true
      },
-     reseverId : {
+     senderName: {
           type: String,
-          required : true          
+          required: true
      },
-     message : {
-          text : {
+     reseverId: {
+          type: String,
+          required: true
+     },
+     message: {
+          text: {
                type: String,
-               default : ''
+               default: ''
           },
-          image : {
-               type : String,
-               default : ''
-          }           
+          messageEncrypt: {
+               type: String,
+               default: ''
+          },
+          image: {
+               type: String,
+               default: ''
+          }
      },
-     status :{
-          type : String,
-          default : 'unseen'
-     }
-},{timestamps : true});
 
-module.exports = model('message',messageSchema);
+     status: {
+          type: String,
+          default: 'unseen'
+     }
+}, { timestamps: true });
+
+module.exports = model('message', messageSchema);
